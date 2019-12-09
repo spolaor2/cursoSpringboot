@@ -8,10 +8,17 @@ import br.com.alura.forum.controller.repository.CursoRepository;
 import br.com.alura.forum.model.Curso;
 import br.com.alura.forum.model.Topico;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class TopicoForm {
 
+	@NotNull @NotBlank @Size(min = 5)
 	private String titulo;
+	@NotNull @NotBlank @Size(min = 10)
 	private String mensagem;
+	@NotNull @NotBlank
 	private String nomeCurso;
 
 	
